@@ -22,7 +22,7 @@ text="""
 工程:DDos-V2.5
 製作:情雲工作室
 由魚生發佈置gifhub
-https://github.com/hellonoob25/Qing_Yun-Studio/blob/main/DDOSV2.5
+https://github.com/hellonoob25/Qing_Yun-Studio/blob/main/DDOSV2.5.py
 ========================================
 """
 print("\033[5;31m%s\033[0m"%text)
