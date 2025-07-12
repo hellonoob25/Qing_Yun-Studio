@@ -26,6 +26,8 @@ https://github.com/hellonoob25/Qing_Yun-Studio/blob/main/DDOSV2.5.py
 ========================================
 """
 print("\033[5;31m%s\033[0m"%text)
+print("若用於違法行為和本工作室無關")
+print("用於違法行為需自行承擔後果")
 ip = input("请输入 IP:")
 port = int(input("攻击端口:"))
 sd = int(input("攻击速度(1~1000):"))
