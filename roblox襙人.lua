@@ -1,7 +1,3 @@
---Nobody cares about credits. Just go ahead and fuck all of the Robloxians into OBLIVION!!!!!!
-
---Variables
-
 local SimpleSexGUI = Instance.new("ScreenGui")
 
 local FGUI = Instance.new("Frame")
@@ -20,7 +16,6 @@ local lbltitle = Instance.new("TextLabel")
 
 local TextLabel = Instance.new("TextLabel")
 
---Properties
 
 SimpleSexGUI.Name = "SimpleSexGUI"
 SimpleSexGUI.Parent = game.CoreGui
@@ -97,7 +92,7 @@ ImageLabel.BorderSizePixel = 1
 ImageLabel.Position = UDim2.new (0.274, 0,0.358, 0)
 ImageLabel.Size = UDim2.new (0, 106,0, 121)
 
---Scripts
+
 
 btnSex.MouseButton1Click:Connect(function()
 
