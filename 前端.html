@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下載驗證</title>
+</head>
+<body>
+<h2>情雲工作室 - 下載驗證</h2>
+
+<input type="password" id="pwInput" placeholder="輸入密碼">
+<button id="checkBtn">確認</button>
+<div id="msg"></div>
+<div id="downloadLink"></div>
+
+<script>
+document.getElementById('checkBtn').addEventListener('click', async () => {
+    const pw = document.getElementById('pwInput').value;
+    const msg = document.getElementById('msg');
+    const linkContainer = document.getElementById('downloadLink');
+    linkContainer.innerHTML = '';
+
+    const formData = new URLSearchParams();
+    formData.append("password", pw);
+
+    const res = await fetch("/verify", {
+        method: "POST",
+        body: formData,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+    });
+    const text = await res.text();
+
+    if(text === "success"){
+        msg.textContent = "密碼正確，可以下載檔案";
+        const link = document.createElement('a');
+        link.href = "/download/sample.txt";
+        link.textContent = "點此下載檔案";
+        linkContainer.appendChild(link);
+    } else {
+        msg.textContent = "密碼錯誤";
+    }
+});
+</script>
+</body>
+</html>
